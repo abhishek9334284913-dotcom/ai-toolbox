@@ -1,0 +1,521 @@
+/* =========================================================
+   VIDEO FOCUS MODE
+   ========================================================= */
+
+.video-focus-page {
+  width: 100%;
+  min-height: calc(100vh - 70px);
+  background: #070b13;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   TOP BAR
+   ========================================================= */
+
+.video-focus-topbar {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.video-focus-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.video-focus-icon {
+  font-size: 25px;
+}
+
+.video-focus-heading h2 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 22px;
+}
+
+.video-focus-heading p {
+  margin: 4px 0 0;
+  color: #7f8ba3;
+  font-size: 13px;
+}
+
+.video-focus-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.video-focus-count {
+  padding: 7px 12px;
+  border-radius: 20px;
+  background: #17102e;
+  color: #b99cff;
+  font-size: 12px;
+}
+
+.video-focus-exit {
+  border: 1px solid #39445f;
+  background: #111827;
+  color: #ffffff;
+  padding: 9px 15px;
+  border-radius: 9px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.video-focus-exit:hover {
+  background: #20283a;
+  border-color: #7c4dff;
+}
+
+
+/* =========================================================
+   GALLERY
+   ========================================================= */
+
+.video-focus-gallery {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(280px, 1fr)
+  );
+
+  gap: 18px;
+  align-items: start;
+  grid-auto-rows: max-content;
+
+  overflow: visible;
+}
+
+
+/* =========================================================
+   CARD
+   ========================================================= */
+
+.focus-video-card {
+  position: relative;
+
+  width: 100%;
+  min-width: 0;
+  height: auto;
+
+  background: #0d1320;
+  border: 1px solid #29344d;
+  border-radius: 14px;
+
+  overflow: visible;
+  align-self: start;
+}
+
+
+/* =========================================================
+   PREVIEW
+   ========================================================= */
+
+.focus-video-preview {
+  position: relative;
+
+  width: 100%;
+
+  overflow: visible;
+
+  background: #05070c;
+  border-radius: 14px 14px 0 0;
+}
+
+
+/* =========================================================
+   RATIOS
+   ========================================================= */
+
+.focus-ratio-9-16 .focus-video-preview {
+  aspect-ratio: 9 / 16;
+}
+
+.focus-ratio-16-9 .focus-video-preview {
+  aspect-ratio: 16 / 9;
+}
+
+.focus-ratio-1-1 .focus-video-preview {
+  aspect-ratio: 1 / 1;
+}
+
+
+/* =========================================================
+   VIDEO
+   ========================================================= */
+
+.focus-video-player {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  background: #000000;
+
+  border-radius: 14px 14px 0 0;
+}
+
+
+/* =========================================================
+   VIDEO READY
+   ========================================================= */
+
+.focus-video-ready {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  color: #ffffff;
+}
+
+.focus-play-icon {
+  width: 56px;
+  height: 56px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #351d75;
+  color: #ffffff;
+
+  font-size: 24px;
+}
+
+
+/* =========================================================
+   GENERATING
+   ========================================================= */
+
+.focus-generating {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  color: #ffffff;
+
+  padding: 25px;
+  box-sizing: border-box;
+}
+
+.focus-spinner {
+  width: 42px;
+  height: 42px;
+
+  border: 4px solid #29344d;
+  border-top-color: #8b5cf6;
+
+  border-radius: 50%;
+
+  animation: focusSpin 1s linear infinite;
+}
+
+@keyframes focusSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.focus-generating strong {
+  font-size: 14px;
+}
+
+.focus-progress-bar {
+  width: min(220px, 80%);
+  height: 6px;
+
+  background: #20283a;
+
+  border-radius: 10px;
+
+  overflow: hidden;
+}
+
+.focus-progress-fill {
+  height: 100%;
+
+  background: #7c4dff;
+
+  border-radius: 10px;
+
+  transition: width 0.3s ease;
+}
+
+.focus-generating span {
+  color: #9ca8bd;
+  font-size: 12px;
+}
+
+
+/* =========================================================
+   THREE DOT MENU
+   ========================================================= */
+
+.focus-menu-wrapper {
+  position: absolute;
+
+  top: 10px;
+  right: 10px;
+
+  z-index: 999999;
+
+  overflow: visible;
+}
+
+.focus-three-dots {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+  margin: 0;
+
+  border: 1px solid #39445f;
+  border-radius: 10px;
+
+  background: #070b13;
+  color: #ffffff;
+
+  font-size: 25px;
+  line-height: 1;
+
+  cursor: pointer;
+
+  list-style: none;
+  user-select: none;
+}
+
+.focus-three-dots::-webkit-details-marker {
+  display: none;
+}
+
+.focus-three-dots::marker {
+  display: none;
+}
+
+.focus-three-dots:hover {
+  background: #151b2b;
+  border-color: #7c4dff;
+}
+
+
+/* =========================================================
+   ACTION MENU
+   ========================================================= */
+
+.focus-action-menu {
+  position: absolute;
+
+  top: 46px;
+  right: 0;
+
+  width: 190px;
+  min-width: 190px;
+
+  padding: 8px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 3px;
+
+  background: #111827;
+
+  border: 1px solid #39445f;
+  border-radius: 12px;
+
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.65);
+
+  z-index: 1000000;
+
+  box-sizing: border-box;
+
+  overflow: visible;
+}
+
+
+/* =========================================================
+   ACTION BUTTONS
+   ========================================================= */
+
+.focus-action-menu button {
+  width: 100%;
+  min-height: 38px;
+
+  padding: 9px 12px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: transparent;
+  color: #e5e7eb;
+
+  text-align: left;
+
+  font-size: 14px;
+
+  cursor: pointer;
+}
+
+.focus-action-menu button:hover {
+  background: #20283a;
+  color: #ffffff;
+}
+
+.focus-action-menu button.danger {
+  color: #ff6b6b;
+}
+
+.focus-action-menu button.danger:hover {
+  background: rgba(255, 70, 70, 0.12);
+  color: #ff8585;
+}
+
+
+/* =========================================================
+   VIDEO INFO
+   ========================================================= */
+
+.focus-video-info {
+  padding: 12px 13px 14px;
+}
+
+.focus-video-prompt {
+  color: #e5e7eb;
+
+  font-size: 14px;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+}
+
+.focus-video-meta {
+  display: flex;
+
+  gap: 7px;
+
+  flex-wrap: wrap;
+
+  margin-top: 9px;
+}
+
+.focus-video-meta span {
+  background: #111a2a;
+
+  border: 1px solid #26334c;
+
+  color: #91a0ba;
+
+  padding: 5px 8px;
+
+  border-radius: 7px;
+
+  font-size: 11px;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+   ========================================================= */
+
+.video-focus-empty {
+  grid-column: 1 / -1;
+
+  min-height: 350px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  border: 1px solid #29344d;
+  border-radius: 16px;
+
+  background: #0d1320;
+
+  color: #ffffff;
+}
+
+.video-focus-empty div {
+  font-size: 50px;
+}
+
+.video-focus-empty span {
+  color: #8793aa;
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+  .video-focus-page {
+    padding: 14px;
+  }
+
+  .video-focus-topbar {
+    align-items: flex-start;
+  }
+
+  .video-focus-actions {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .video-focus-heading h2 {
+    font-size: 18px;
+  }
+
+  .video-focus-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .focus-action-menu {
+    width: 185px;
+    min-width: 185px;
+  }
+}
